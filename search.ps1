@@ -37,7 +37,7 @@ instagram.com/– Instagram
 ok.ru/profile/– Одноклассники
 
 📟 Telegram:
-@sherlock, tg1234567890 – логин или ID
+@kurdanovexe, tg1234567890 – логин или ID
 
 📄 Документы:
 /vu 1234567890 – водительские права
