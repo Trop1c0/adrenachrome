@@ -1,5 +1,5 @@
-[Console]::OutputEncoding = [System.Text.Encoding]::UTF8
-[Console]::InputEncoding = [System.Text.Encoding]::UTF8
+chcp 65001 | Out-Null
+$OutputEncoding = [System.Text.Encoding]::UTF8
 
 $asciiArt = @'
  /$$   /$$                           /$$                                                /$$$$$$$$                    
@@ -69,7 +69,8 @@ Write-Host "Поиск по номеру +$phone..." -ForegroundColor Yellow
 Write-Host "Ожидание 10 секунд..." -ForegroundColor DarkYellow
 
 for ($i = 10; $i -gt 0; $i--) {
-    Write-Host "`r[$('=' * ($i * 5))] $i секунд..." -NoNewline -ForegroundColor DarkYellow
+    $bar = "=" * ((10 - $i + 1) * 5)
+    Write-Host "`r[$bar] $i секунд" -NoNewline -ForegroundColor DarkYellow
     Start-Sleep -Seconds 1
 }
 
